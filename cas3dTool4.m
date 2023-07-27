@@ -13,6 +13,7 @@
 %4.5
 %- removed console output of "saveFigures" variable
 %- improved error handling on missing metadata
+%- improved error handling on exiting if no results figure exists
 
 %4.43
 %- added more intuitive file selection
@@ -655,7 +656,10 @@ end
 messageButtonTexts = [{'Browse to folder'},{'OK'}];
 messageBoxObject = questdlg(endMessage, endTitle, messageButtonTexts{1}, messageButtonTexts{2}, messageButtonTexts{1});
 
-close(resFig);
+if exist('resFig')
+    close(resFig);
+end
+
 if strcmp(messageBoxObject, messageButtonTexts{1})
     winopen(basePath);
 end

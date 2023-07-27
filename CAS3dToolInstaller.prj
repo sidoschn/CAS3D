@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.ezdeploy" plugin-version="1.0">
-  <configuration build-checksum="1619133286" file="E:\DATEN\Messdaten\Omero_Dropbox\Schneidereit\SoftwareDevelopment\MATLAB no source control\cas3dTool\CAS3dToolInstaller.prj" location="E:\DATEN\Messdaten\Omero_Dropbox\Schneidereit\SoftwareDevelopment\MATLAB no source control\cas3dTool" name="CAS3dToolInstaller" preferred-package-location="E:\DATEN\Messdaten\Omero_Dropbox\Schneidereit\SoftwareDevelopment\MATLAB no source control\cas3dTool\CAS3dToolInstaller\for_redistribution" preferred-package-type="package.type.exe" target="target.ezdeploy.standalone" target-name="Application Compiler">
+  <configuration build-checksum="1619133286" file="E:\DATEN\Messdaten\Omero_Dropbox\Schneidereit\SoftwareDevelopment\MATLAB source control\CAS3Dtool\CAS3D\CAS3dToolInstaller.prj" location="E:\DATEN\Messdaten\Omero_Dropbox\Schneidereit\SoftwareDevelopment\MATLAB source control\CAS3Dtool\CAS3D" name="CAS3dToolInstaller" preferred-package-location="E:\DATEN\Messdaten\Omero_Dropbox\Schneidereit\SoftwareDevelopment\MATLAB no source control\cas3dTool\CAS3dToolInstaller\for_redistribution" preferred-package-type="package.type.exe" target="target.ezdeploy.standalone" target-name="Application Compiler">
     <param.appname>CAS3dTool</param.appname>
     <param.icon>${PROJECT_ROOT}\CAS3dToolInstaller_resources\icon.ico</param.icon>
     <param.icons>
@@ -8,12 +8,16 @@
       <file>${PROJECT_ROOT}\CAS3dToolInstaller_resources\icon_24.png</file>
       <file>${PROJECT_ROOT}\CAS3dToolInstaller_resources\icon_16.png</file>
     </param.icons>
-    <param.version>4.43</param.version>
+    <param.version>4.5</param.version>
     <param.authnamewatermark>Dominik Schneidereit</param.authnamewatermark>
     <param.email>dominik.schneidereit@fau.de</param.email>
     <param.company>Institute of Medical Biotechnology</param.company>
     <param.summary>Analyzes SGH images of sarcomere structures and assigns a CAS3d value to reflect the degree of organization of the structure.</param.summary>
     <param.description>New main direction detection method using 3d FFT, now also the mean sarcomere length is determined
+
+4.5
+- cleaner console output
+- improved error handling on missing metadata
 
 -4.4 improved background exclusion
 
@@ -31,10 +35,10 @@ added launcher with improved GUI features</param.description>
     <param.logo>${PROJECT_ROOT}\Logo\InstallerBG.png</param.logo>
     <param.install.notes />
     <param.target.install.notes />
-    <param.intermediate>${PROJECT_ROOT}\CAS3dToolInstaller\for_testing</param.intermediate>
-    <param.files.only>${PROJECT_ROOT}\CAS3dToolInstaller\for_redistribution_files_only</param.files.only>
-    <param.output>${PROJECT_ROOT}\CAS3dToolInstaller\for_redistribution</param.output>
-    <param.logdir>${PROJECT_ROOT}\CAS3dToolInstaller</param.logdir>
+    <param.intermediate>E:\DATEN\Messdaten\Omero_Dropbox\Schneidereit\SoftwareDevelopment\MATLAB source control\CAS3Dtool\builds\forTesting</param.intermediate>
+    <param.files.only>E:\DATEN\Messdaten\Omero_Dropbox\Schneidereit\SoftwareDevelopment\MATLAB source control\CAS3Dtool\builds\redistFilesOnly</param.files.only>
+    <param.output>E:\DATEN\Messdaten\Omero_Dropbox\Schneidereit\SoftwareDevelopment\MATLAB source control\CAS3Dtool\builds\packagedInstallers</param.output>
+    <param.logdir>E:\DATEN\Messdaten\Omero_Dropbox\Schneidereit\SoftwareDevelopment\MATLAB source control\CAS3Dtool\builds</param.logdir>
     <param.enable.clean.build>false</param.enable.clean.build>
     <param.user.defined.mcr.options />
     <param.target.type>subtarget.standalone</param.target.type>
@@ -42,7 +46,7 @@ added launcher with improved GUI features</param.description>
     <param.web.mcr>true</param.web.mcr>
     <param.package.mcr>false</param.package.mcr>
     <param.no.mcr>false</param.no.mcr>
-    <param.web.mcr.name>cas3d443withLauncher</param.web.mcr.name>
+    <param.web.mcr.name>cas3d45</param.web.mcr.name>
     <param.package.mcr.name>MyAppInstaller_mcr</param.package.mcr.name>
     <param.no.mcr.name>MyAppInstaller_app</param.no.mcr.name>
     <param.windows.command.prompt>false</param.windows.command.prompt>
@@ -60,6 +64,10 @@ added launcher with improved GUI features</param.description>
  Description 
  	 New main direction detection method using 3d FFT, now also the mean sarcomere length is determined
 
+4.5
+- cleaner console output
+- improved error handling on missing metadata
+
 -4.4 improved background exclusion
 
 -4.42
@@ -75,10 +83,6 @@ added launcher with improved GUI features</param.help.text>
       <param.installpath.combo />
       <param.install.notes />
       <param.target.install.notes />
-      <param.intermediate />
-      <param.files.only />
-      <param.output />
-      <param.logdir />
       <param.enable.clean.build />
       <param.user.defined.mcr.options />
       <param.target.type />
@@ -123,9 +127,9 @@ added launcher with improved GUI features</param.help.text>
       <file>${PROJECT_ROOT}\sobel3z.mat</file>
     </fileset.depfun>
     <build-deliverables>
-      <file location="${PROJECT_ROOT}\CAS3dToolInstaller\for_testing" name="CAS3dTool.exe" optional="false">E:\DATEN\Messdaten\Omero_Dropbox\Schneidereit\SoftwareDevelopment\MATLAB no source control\cas3dTool\CAS3dToolInstaller\for_testing\CAS3dTool.exe</file>
-      <file location="${PROJECT_ROOT}\CAS3dToolInstaller\for_testing" name="readme.txt" optional="true">E:\DATEN\Messdaten\Omero_Dropbox\Schneidereit\SoftwareDevelopment\MATLAB no source control\cas3dTool\CAS3dToolInstaller\for_testing\readme.txt</file>
-      <file location="${PROJECT_ROOT}\CAS3dToolInstaller\for_testing" name="splash.png" optional="false">E:\DATEN\Messdaten\Omero_Dropbox\Schneidereit\SoftwareDevelopment\MATLAB no source control\cas3dTool\CAS3dToolInstaller\for_testing\splash.png</file>
+      <file location="E:\DATEN\Messdaten\Omero_Dropbox\Schneidereit\SoftwareDevelopment\MATLAB source control\CAS3Dtool\builds\forTesting" name="splash.png" optional="false">E:\DATEN\Messdaten\Omero_Dropbox\Schneidereit\SoftwareDevelopment\MATLAB source control\CAS3Dtool\builds\forTesting\splash.png</file>
+      <file location="E:\DATEN\Messdaten\Omero_Dropbox\Schneidereit\SoftwareDevelopment\MATLAB source control\CAS3Dtool\builds\forTesting" name="readme.txt" optional="true">E:\DATEN\Messdaten\Omero_Dropbox\Schneidereit\SoftwareDevelopment\MATLAB source control\CAS3Dtool\builds\forTesting\readme.txt</file>
+      <file location="E:\DATEN\Messdaten\Omero_Dropbox\Schneidereit\SoftwareDevelopment\MATLAB source control\CAS3Dtool\builds\forTesting" name="CAS3dTool.exe" optional="false">E:\DATEN\Messdaten\Omero_Dropbox\Schneidereit\SoftwareDevelopment\MATLAB source control\CAS3Dtool\builds\forTesting\CAS3dTool.exe</file>
     </build-deliverables>
     <workflow />
     <matlab>
