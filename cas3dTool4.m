@@ -1,9 +1,18 @@
 
-%CAS3d Tool Version 4.43
+%CAS3d Tool Version 4.5
 %Dominik Schneidereit
 %Institute of Medical Biotechnology
 %2019
 
+%todo
+%4.5
+
+%- include proper Documentation into Build
+
+%---
+%4.5
+%- removed console output of "saveFigures" variable
+%- improved error handling on missing metadata
 
 %4.43
 %- added more intuitive file selection
@@ -209,9 +218,15 @@ for i=1:numel(imageFileNameList)
     stackSliceCount = imageMetaData.getPixelsSizeZ(0).getValue();
     stackWidth = imageMetaData.getPixelsSizeX(0).getValue();
     stackHeight = imageMetaData.getPixelsSizeY(0).getValue();
-    physPixSizeX = imageMetaData.getPixelsPhysicalSizeX(0).value().doubleValue();
-    physPixSizeY = imageMetaData.getPixelsPhysicalSizeY(0).value().doubleValue();
-    physPixSizeZ = imageMetaData.getPixelsPhysicalSizeZ(0).value().doubleValue();
+    try
+        physPixSizeX = imageMetaData.getPixelsPhysicalSizeX(0).value().doubleValue();
+        physPixSizeY = imageMetaData.getPixelsPhysicalSizeY(0).value().doubleValue();
+        physPixSizeZ = imageMetaData.getPixelsPhysicalSizeZ(0).value().doubleValue();
+    catch ME
+        warning('Physical size metadata is missing in at least one dimension of the selected data set, the evaluation of the data set is skipped.');
+        wCount = wCount+1;
+        continue;
+    end
     %     physPixUnitsX = char(imageMetaData.getPixelsPhysicalSizeX(0).unit().getSymbol());
     %    physPixSizeX = imageMetaData.getPixelsPhysicalSizeX(0).getValue();
     %    physPixSizeY = imageMetaData.getPixelsPhysicalSizeY(0).getValue();
@@ -631,8 +646,14 @@ endMessage = ['Find your log file "' resultsFileName '" and figures at' newline 
 
 disp(endMessage);
 
+if wCount>0
+    endTitle = ['Analysis completed with ' num2str(wCount) ' warnings'];
+else
+    endTitle = 'Analysis complete';
+end
+
 messageButtonTexts = [{'Browse to folder'},{'OK'}];
-messageBoxObject = questdlg(endMessage, 'Analysis complete', messageButtonTexts{1}, messageButtonTexts{2}, messageButtonTexts{1});
+messageBoxObject = questdlg(endMessage, endTitle, messageButtonTexts{1}, messageButtonTexts{2}, messageButtonTexts{1});
 
 close(resFig);
 if strcmp(messageBoxObject, messageButtonTexts{1})
@@ -701,7 +722,7 @@ end
 
 function saveFigureCheckbox_callback(src,event)
 global bSaveFigure;
-bSaveFigure = src.Value
+bSaveFigure = src.Value;
 end
 
 function systemSep = getSystemCSVseparator()

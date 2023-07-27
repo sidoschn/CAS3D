@@ -1,5 +1,5 @@
 
-disp('CAS3d Tool v4.43');
+disp('CAS3d Tool v4.5');
 disp('Institute of Medical Biotechnology, FAU Erlangen');
 disp('loading GUI...');
 
@@ -14,7 +14,7 @@ global bEvalRunning;
 launcherfigure = uifigure;
 launcherfigure.Color = [1 1 1];
 launcherfigure.Position = [256 256 512 512];
-launcherfigure.Name = 'CAS3d Tool v4.43';
+launcherfigure.Name = 'CAS3d Tool v4.5';
 launcherfigure.NumberTitle = 'off';
 launcherfigure.ToolBar = 'none';
 launcherfigure.MenuBar = 'none';
