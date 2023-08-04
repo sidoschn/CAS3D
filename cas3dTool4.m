@@ -7,13 +7,12 @@
 %todo
 %4.5
 
-%- include proper Documentation into Build
-
 %---
 %4.5
 %- removed console output of "saveFigures" variable
 %- improved error handling on missing metadata
 %- improved error handling on exiting if no results figure exists
+%- include proper Documentation into Build
 
 %4.43
 %- added more intuitive file selection
@@ -39,7 +38,7 @@ wCount = 0;
 defaultBasePath = 'C:\';
 %defaultFileExt = 'C00_xyz Stage Z0000.ome.tif';
 defaultFileExt = '.tif';
-resultsFileName = 'CAS3dResultsSummary';
+resultsFileName = 'CAS3DResultsSummary';
 
 %query path and file extension
 global basePath;
