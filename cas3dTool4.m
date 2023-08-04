@@ -13,6 +13,7 @@
 %- improved error handling on missing metadata
 %- improved error handling on exiting if no results figure exists
 %- include proper Documentation into Build
+%- updated installer and launcher icon
 
 %4.43
 %- added more intuitive file selection

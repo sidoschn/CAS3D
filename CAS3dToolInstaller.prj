@@ -1,6 +1,6 @@
 <deployment-project plugin="plugin.ezdeploy" plugin-version="1.0">
-  <configuration build-checksum="1619133286" file="E:\DATEN\Messdaten\Omero_Dropbox\Schneidereit\SoftwareDevelopment\MATLAB source control\CAS3Dtool\CAS3D\CAS3dToolInstaller.prj" location="E:\DATEN\Messdaten\Omero_Dropbox\Schneidereit\SoftwareDevelopment\MATLAB source control\CAS3Dtool\CAS3D" name="CAS3dToolInstaller" preferred-package-location="E:\DATEN\Messdaten\Omero_Dropbox\Schneidereit\SoftwareDevelopment\MATLAB no source control\cas3dTool\CAS3dToolInstaller\for_redistribution" preferred-package-type="package.type.exe" target="target.ezdeploy.standalone" target-name="Application Compiler">
-    <param.appname>CAS3dTool</param.appname>
+  <configuration build-checksum="2245752659" file="E:\DATEN\Messdaten\Omero_Dropbox\Schneidereit\SoftwareDevelopment\MATLAB source control\CAS3Dtool\CAS3D\CAS3dToolInstaller.prj" location="E:\DATEN\Messdaten\Omero_Dropbox\Schneidereit\SoftwareDevelopment\MATLAB source control\CAS3Dtool\CAS3D" name="CAS3dToolInstaller" preferred-package-location="E:\DATEN\Messdaten\Omero_Dropbox\Schneidereit\SoftwareDevelopment\MATLAB source control\CAS3Dtool\builds\packagedInstallers" preferred-package-type="package.type.exe" target="target.ezdeploy.standalone" target-name="Application Compiler">
+    <param.appname>CAS3DTool</param.appname>
     <param.icon>${PROJECT_ROOT}\CAS3dToolInstaller_resources\icon.ico</param.icon>
     <param.icons>
       <file>${PROJECT_ROOT}\CAS3dToolInstaller_resources\icon_48.png</file>
@@ -30,7 +30,7 @@ removed channel selection when only one channel is detected
 added launcher with improved GUI features</param.description>
     <param.screenshot>${PROJECT_ROOT}\Logo\SplashScreen.png</param.screenshot>
     <param.guid />
-    <param.installpath.string>\Institute of Medical Biotechnology\CAS3dTool\</param.installpath.string>
+    <param.installpath.string>\Institute of Medical Biotechnology\CAS3DTool\</param.installpath.string>
     <param.installpath.combo>option.installpath.programfiles</param.installpath.combo>
     <param.logo>${PROJECT_ROOT}\Logo\InstallerBG.png</param.logo>
     <param.install.notes />
@@ -129,7 +129,7 @@ added launcher with improved GUI features</param.help.text>
     <build-deliverables>
       <file location="E:\DATEN\Messdaten\Omero_Dropbox\Schneidereit\SoftwareDevelopment\MATLAB source control\CAS3Dtool\builds\forTesting" name="splash.png" optional="false">E:\DATEN\Messdaten\Omero_Dropbox\Schneidereit\SoftwareDevelopment\MATLAB source control\CAS3Dtool\builds\forTesting\splash.png</file>
       <file location="E:\DATEN\Messdaten\Omero_Dropbox\Schneidereit\SoftwareDevelopment\MATLAB source control\CAS3Dtool\builds\forTesting" name="readme.txt" optional="true">E:\DATEN\Messdaten\Omero_Dropbox\Schneidereit\SoftwareDevelopment\MATLAB source control\CAS3Dtool\builds\forTesting\readme.txt</file>
-      <file location="E:\DATEN\Messdaten\Omero_Dropbox\Schneidereit\SoftwareDevelopment\MATLAB source control\CAS3Dtool\builds\forTesting" name="CAS3dTool.exe" optional="false">E:\DATEN\Messdaten\Omero_Dropbox\Schneidereit\SoftwareDevelopment\MATLAB source control\CAS3Dtool\builds\forTesting\CAS3dTool.exe</file>
+      <file location="E:\DATEN\Messdaten\Omero_Dropbox\Schneidereit\SoftwareDevelopment\MATLAB source control\CAS3Dtool\builds\forTesting" name="CAS3DTool.exe" optional="false">E:\DATEN\Messdaten\Omero_Dropbox\Schneidereit\SoftwareDevelopment\MATLAB source control\CAS3Dtool\builds\forTesting\CAS3DTool.exe</file>
     </build-deliverables>
     <workflow />
     <matlab>
