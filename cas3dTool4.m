@@ -9,6 +9,7 @@
 
 %---
 %4.5
+%- added file type selection
 %- removed console output of "saveFigures" variable
 %- improved error handling on missing metadata
 %- improved error handling on exiting if no results figure exists
@@ -54,6 +55,11 @@ end
 % %initialize process abortion functionality
 % global bAbortEval;
 % abortMessage = "Evaluation was aborted";
+
+defaultFileExt = inputdlg('Image file type:', 'Specify the image file type', 6, '.tif');
+if ~ischar(defaultFileExt)
+    defaultFileExt = '.tif';
+end
 
 %basePath = 'E:\DATEN\Messdaten\Omero_Dropbox\Schneidereit\SoftwareDevelopment\MATLAB no source control\cas3dTool\TestImagesAndStacks\NoisySineWaveStacks';
 basePath = uigetdir(defaultBasePath, 'Select base path for image detection (subfolders will also be searched)');
