@@ -58,10 +58,16 @@ end
 % abortMessage = "Evaluation was aborted";
 
 newDefaultExt = inputdlg("Image file type:", "Specify the image file type",[1 20], ".tif");
-if ~ischar(newDefaultExt)
+if isempty(newDefaultExt)
     defaultFileExt = '.tif';
+    disp("File type undefined or empty, using default...");
 else
-    defaultFileExt = char(newDefaultExt);
+    if isempty(newDefaultExt{1})
+    defaultFileExt = '.tif';
+    disp("File type undefined or empty, using default...");
+    else
+        defaultFileExt = char(newDefaultExt);
+    end
 end
 
 %basePath = 'E:\DATEN\Messdaten\Omero_Dropbox\Schneidereit\SoftwareDevelopment\MATLAB no source control\cas3dTool\TestImagesAndStacks\NoisySineWaveStacks';
