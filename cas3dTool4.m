@@ -1,5 +1,5 @@
 
-%CAS3d Tool Version 4.5
+%CAS3d Tool Version 4.51
 %Dominik Schneidereit
 %Institute of Medical Biotechnology
 %2019
@@ -9,6 +9,7 @@
 
 %---
 %4.5
+%- fixed the bug with file type selection variable type synthax
 %- added file type selection
 %- removed console output of "saveFigures" variable
 %- improved error handling on missing metadata
@@ -56,9 +57,11 @@ end
 % global bAbortEval;
 % abortMessage = "Evaluation was aborted";
 
-defaultFileExt = inputdlg('Image file type:', 'Specify the image file type', 6, '.tif');
-if ~ischar(defaultFileExt)
+newDefaultExt = inputdlg("Image file type:", "Specify the image file type",[1 20], ".tif");
+if ~ischar(newDefaultExt)
     defaultFileExt = '.tif';
+else
+    defaultFileExt = char(newDefaultExt);
 end
 
 %basePath = 'E:\DATEN\Messdaten\Omero_Dropbox\Schneidereit\SoftwareDevelopment\MATLAB no source control\cas3dTool\TestImagesAndStacks\NoisySineWaveStacks';
