@@ -1,8 +1,12 @@
 
-%CAS3d Tool Version 4.51
+%CAS3d Tool Version 4.52
 %Dominik Schneidereit
 %Institute of Medical Biotechnology
 %2019
+
+%4.52
+% - fixed a critical bug with channel selection where channels would not be
+%   separated correctly.
 
 %todo
 %4.5
@@ -269,7 +273,9 @@ for i=1:numel(imageFileNameList)
     
     %fill matrix with image values
     for j=1:stackSliceCount
-        imagePixelMatrixRaw(:,:,j)=imageData{1,1}{(j*selectedChannel),1};
+        
+        imagePixelMatrixRaw(:,:,j)=imageData{1,1}{(((j-1)*stackChannelCount)+selectedChannel),1};
+        %imagePixelMatrixRaw(:,:,j)=imageData{1,1}{(j*selectedChannel),1};
     end
     
     %free up RAM
